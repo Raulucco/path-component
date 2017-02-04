@@ -1,0 +1,27 @@
+<ul class="mdl-stepper mdl-stepper--horizontal">
+  <li class="mdl-step is-active">
+    <span class="mdl-step__label">
+        <span class="mdl-step__title">
+          <span class="mdl-step__title-text">{{currentStep?.title}}</span>
+    <span class="mdl-step__title-message">{{currentStep?.message}}</span>
+    </span>
+    <span class="mdl-step__label-indicator"><span class="mdl-step__label-indicator-content">1</span></span>
+    </span>
+    <div class="mdl-step__content mdl-step__active">
+      <template appStepContent></template>
+    </div>
+    <div class="mdl-step__actions">
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-button--raised" data-stepper-next=""
+        data-upgraded=",MaterialButton,MaterialRipple">
+        Continue
+        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+        </button>
+        <button class="mdl-button mdl-js-button mdl-js-ripple-effect" data-stepper-cancel="" data-upgraded=",MaterialButton,MaterialRipple">
+            Cancel
+          <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
+        <button class="mdl-button mdl-js-button mdl-js-ripple-effect" data-stepper-back="" disabled="" data-upgraded=",MaterialButton,MaterialRipple">
+            Back
+          <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
+    </div>
+  </li>
+</ul>

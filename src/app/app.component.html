@@ -1,3 +1,9 @@
-<h1>
-  {{title}}
-</h1>
+<div class="card mdl-shadow--2dp">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Welcome</h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+    <app-steps-container [steps]="stepComponents">
+    </app-steps-container>
+  </div>
+</div>
