@@ -1,0 +1,31 @@
+<div class="mdl-card mdl-shadow--2dp mdl-card__wide-center">
+  <div class="mdl-card__title mdl-bg--light-gray">
+    <div class="mdl-title">
+      <div class="mdl-stepper-horizontal-alternative">
+        <div class="mdl-stepper-step" *ngFor="let step of steps; let idx = index" [ngClass]="{'active-step': activeStepIndex === idx, 'step-done step-success': isStepCompleted(idx)}"
+          (click)="jumpToStep(idx)">
+          <div class="mdl-stepper-circle"><span>{{idx + 1}}</span></div>
+          <div class="mdl-stepper-title">{{step.data.title}}</div>
+          <div class="mdl-stepper-bar-left"></div>
+          <div class="mdl-stepper-bar-right"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mdl-card__supporting-text">
+  <template appStepContent></template>
+</div>
+<div class="mdl-card__actions mdl-card--border">
+  <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--raised" (click)="continue()"
+    [disabled]="isLastStepDisplayed && currentStepIsCompleted">
+    Continue
+    <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span>
+    </button>
+    <button class="mdl-button mdl-js-ripple-effect" (click)="removeStepFromSuccessState()" [disabled]="!currentStepIsCompleted">
+            Cancel
+          <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
+    <button class="mdl-button mdl-js-ripple-effect" [disabled]="isFirstStepDisplayed" (click)="back()">
+            Back
+          <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
+</div>
+</div>

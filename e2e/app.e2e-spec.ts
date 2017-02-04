@@ -1,10 +1,10 @@
-import { SteppersPage } from './app.po';
+import { StepperPage } from './app.po';
 
-describe('steppers App', function() {
+describe('stepper App', function() {
   let page: SteppersPage;
 
   beforeEach(() => {
-    page = new SteppersPage();
+    page = new StepperPage();
   });
 
   it('should display message saying app works', () => {

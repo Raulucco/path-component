@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class SteppersPage {
+export class StepperPage {
   navigateTo() {
     return browser.get('/');
   }
